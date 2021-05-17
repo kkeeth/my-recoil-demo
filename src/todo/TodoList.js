@@ -1,6 +1,8 @@
 import { useRecoilValue } from 'recoil'
 import { todoListState } from '../Atoms'
 import TodoItemCreator from './TodoItemCreator'
+import TodoListStats from './TodoListStats'
+import TodoListFilters from './TodoListFilters'
 import TodoItem from './TodoItem'
 
 const TodoList = () => {
@@ -8,8 +10,8 @@ const TodoList = () => {
 
   return (
     <>
-      {/* <TodoListStats /> */}
-      {/* <TodoListFilters /> */}
+      <TodoListStats />
+      <TodoListFilters />
       <TodoItemCreator />
 
       {todoList.map((todoItem) => (

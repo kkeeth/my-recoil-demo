@@ -3,8 +3,8 @@ import { useSetRecoilState } from 'recoil'
 import { todoListState } from '../Atoms'
 
 const TodoItemCreator = () => {
-  const [inputValue, setInputValue] = useState('');
-  const setTodoList = useSetRecoilState(todoListState);
+  const [inputValue, setInputValue] = useState('')
+  const setTodoList = useSetRecoilState(todoListState)
 
   const addItem = () => {
     setTodoList((oldTodoList) => [
@@ -15,11 +15,11 @@ const TodoItemCreator = () => {
         isComplete: false,
       },
     ]);
-    setInputValue('');
+    setInputValue('')
   };
 
   const onChange = ({target: {value}}) => {
-    setInputValue(value);
+    setInputValue(value)
   };
 
   return (
@@ -32,7 +32,7 @@ const TodoItemCreator = () => {
 export default TodoItemCreator
 
 // utility for creating unique Id
-let id = 0;
-function getId() {
-  return id++;
+let id = 0
+const getId = () => {
+  return id++
 }
