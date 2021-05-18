@@ -12,5 +12,10 @@ export const todoListState = atom({
 
 export const todoListFilterState = atom({
   key: 'todoListFilterState',
-  default: 'Show All'
+  default: 'Show All',
+})
+
+export const fontSizeState = atom({
+  key: 'fontSizeState',
+  default: 14,
 })
